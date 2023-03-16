@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Статья {{ questions.id }}
+{% endblock %}
+
+{% block body %}
+<div class="container" style="margin-top: 100px">
+   <h1>{{ questions.title }}</h1>
+   <div class="alert alert-info">
+       <p>{{ questions.text }}</p>
+       <p><b>Date: {{ questions.date.date() }}</b></p>
+       <a href="/questions/{{ questions.id }}/delete" class="btn btn-danger">Delete</a>
+       <a href="/questions/{{ questions.id }}/update" class="btn btn-success">Update</a>
+   </div>
+</div>
+{% endblock %}

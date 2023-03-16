@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Support
+{% endblock %}
+
+{% block body %}
+<div class="container" style="margin-top: 100px">
+    <h1>Answer your question here!</h1>
+    <form action="/support" method="post">
+        <input type="text" name="title" id="title" class="form-control" placeholder="Enter your name"><br>
+        <textarea name="intro" id="intro" class="form-control" placeholder="Intro of your problem"></textarea><br>
+        <textarea name="text" id="text" class="form-control" placeholder="Describe your problem here"></textarea><br>
+        <input type="submit" class="btn btn-success" value="Send">
+    </form>
+</div>
+
+{% endblock %}
